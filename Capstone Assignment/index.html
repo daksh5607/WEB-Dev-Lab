@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Nexus Gym Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h2>AI NEXUS <span>GYM</span></h2>
+        <p>Smart Membership Calculator</p>
+    </header>
+    
+    <div class="form-container">
+        <div class="input-group">
+            <label for="plan">Select Tier</label>
+            <select id="plan">
+                <option value="40">Basic (Gym Access)</option>
+                <option value="70">Pro (Gym + Pool)</option>
+                <option value="120">Elite (All Access + AI Coach)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="months">Duration (Months)</label>
+            <input type="number" id="months" value="1" min="1" max="24">
+        </div>
+
+        <div class="input-group">
+            <label for="discount">Member Status</label>
+            <select id="discount">
+                <option value="1">Standard</option>
+                <option value="0.8">Student (20% Off)</option>
+                <option value="0.9">Military/First Responder (10% Off)</option>
+            </select>
+        </div>
+
+        <div class="summary-card">
+            <label>Estimated Monthly Total</label>
+            <div class="price-display" id="totalPrice">$40.00</div>
+            <div id="features">
+                <span class="feature-tag">Free WiFi</span>
+                <span class="feature-tag">Locker Access</span>
+                <span class="feature-tag" id="dynamicFeature">Standard Hours</span>
+            </div>
+        </div>
+        
+        <button class="btn-enroll">Start Your Journey</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
