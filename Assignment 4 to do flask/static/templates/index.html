@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Professional To Do App</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My To-Do List</h1>
+
+
+<input
+id="title"
+type="text"
+placeholder="Task Title">
+
+
+<textarea
+id="desc"
+placeholder="Task Description">
+</textarea>
+
+
+
+<select id="priority">
+
+<option value="Low">
+Low
+</option>
+
+<option value="Medium">
+Medium
+</option>
+
+<option value="High">
+High
+</option>
+
+</select>
+
+
+<button onclick="addTask()">
+Add Task
+</button>
+
+
+
+<div class="filters">
+
+<button onclick="loadTasks()">
+All
+</button>
+
+<button
+onclick=
+"filterTasks('active')">
+Active
+</button>
+
+<button
+onclick=
+"filterTasks('completed')">
+Completed
+</button>
+
+</div>
+
+
+<h3 id="counter">
+0 / 0
+</h3>
+
+
+<ul id="taskList"></ul>
+
+</div>
+
+
+<script src=
+"{{ url_for('static',
+filename='js/app.js') }}">
+</script>
+
+</body>
+</html>
